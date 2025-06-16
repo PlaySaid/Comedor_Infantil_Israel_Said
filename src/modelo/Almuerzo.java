@@ -1,4 +1,4 @@
-package com.comedorinfantil.modelo;
+package modelo;
 
 public class Almuerzo {
     private int id;
@@ -15,11 +15,7 @@ public class Almuerzo {
     public String getDescripcion() { return descripcion; }
     public String getFecha() { return fecha; }
 
+    public void setId(int id) { this.id = id; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
     public void setFecha(String fecha) { this.fecha = fecha; }
-
-    @Override
-    public String toString() {
-        return "Almuerzo{id=" + id + ", descripcion='" + descripcion + "', fecha='" + fecha + "'}";
-    }
 }

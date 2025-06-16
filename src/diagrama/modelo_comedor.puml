@@ -1,0 +1,56 @@
+@startuml
+
+class Niño {
+    - id: int
+    - nombre: String
+    - edad: int
+    - genero: String
+    - id_encargado: int
+}
+
+class Encargado {
+    - id: int
+    - nombre: String
+    - telefono: String
+}
+
+class Personal {
+    - id: int
+    - nombre: String
+    - cargo: String
+}
+
+class Sucursal {
+    - id: int
+    - nombre: String
+    - direccion: String
+}
+
+class Almuerzo {
+    - id: int
+    - descripcion: String
+    - fecha: Date
+}
+
+class EntregaAlmuerzo {
+    - id: int
+    - id_nino: int
+    - id_almuerzo: int
+    - fecha_entrega: Date
+}
+
+class RegistroMedico {
+    - id: int
+    - id_nino: int
+    - observaciones: String
+    - fecha: Date
+}
+
+Niño --> Encargado
+EntregaAlmuerzo --> Niño
+EntregaAlmuerzo --> Almuerzo
+RegistroMedico --> Niño
+
+@enduml
+
+
